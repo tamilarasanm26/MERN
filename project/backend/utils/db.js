@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
-const DbCon = async () => {
+const db = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/project');
+    await mongoose.connect('mongodb://127.0.0.1:27017/project');
     console.log('MongoDB connected');
   } catch (error) {
     console.error('MongoDB connection error:', error);
   }
 };
 
-export default DbCon;
+export default db;
